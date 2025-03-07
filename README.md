@@ -11,6 +11,13 @@ The `pigpiod` daemon program has to be started before running the node, with
 sudo pigpiod
 ```
 
+Then the node can be run by
+```bash
+ros2 run bigomni_control control_client
+```
+
+(Don't forget to source the workspace before usage!)
+
 The `std_msgs/msg/UInt8MultiArray` message interface is used. **IMPORTANT**: the code does not check the size of the data provided, only the data field is used. This makes it possible to send only partly initialized messages but also prone to reading corrupted data. Complete data structure:
 
 - topic: `/control`

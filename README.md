@@ -50,7 +50,7 @@ Where `PWM<i><d>` stands for:
 Sending the message repeatedly at 10Hz:
 
 ```bash
-ros2 topic pub -r 10 /control /std_msgs/msg/UInt8MultiArray "{layout: {dim: [{label: 'pwm', size: 6, stride: 0}], data_offset: 0}, data: [120,8,0,128,0,128,0]}"
+ros2 topic pub -r 10 /control std_msgs/msg/UInt8MultiArray "{layout: {dim: [{label: 'pwm', size: 6, stride: 0}], data_offset: 0}, data: [128,0,128,0,128,0]}"
 ```
 
 ## Minimalist
@@ -58,5 +58,5 @@ ros2 topic pub -r 10 /control /std_msgs/msg/UInt8MultiArray "{layout: {dim: [{la
 Sending the message repeatedly at 10Hz:
 
 ```bash
-ros2 topic pub -r 10 /control /std_msgs/msg/UInt8MultiArray "data: [120,8,0,128,0,128,0]"
+ros2 topic pub -r 10 /control std_msgs/msg/UInt8MultiArray "data: [128,0,128,0,128,0]"
 ```
